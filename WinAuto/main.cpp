@@ -20,11 +20,15 @@ int main() {
 	}
 	auto selectFileWindows = selectFileWindowsList.at(0);
 
-	auto editList = selectFileWindows.windowsList().filterByClassName( TEXT("Edit"));
+	auto editList = selectFileWindows.windowsList().filterByClassName(TEXT("Edit"));
 	editList.at(0).setTitle(TEXT("D:\\Desktop\\佳成电子版解压\\创意学全书  （下册）_10165980"));
 
 	buttonList = selectFileWindows.windowsList().filterByClassName(TEXT("Button")).filterByTitle(TEXT("确定"));
 	buttonList.at(0).click();
+
+	buttonList = windows.windowsList().filterByClassName(TEXT("Button")).filterByTitle(TEXT("或转换出来的PDF文件:"));
+	buttonList.at(0).click();
+
 
 	buttonList = windows.windowsList().filterByClassName(TEXT("Button")).filterByTitle(TEXT("&4、开始转换"));
 	buttonList.at(0).click();
